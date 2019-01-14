@@ -1,0 +1,27 @@
+
+<h3>{{titulo}}</h3>
+<table>
+    <thead>
+    <tr>
+        <th>Código</th>
+        <th>Nome</th>
+        <th>Limite de Crédito</th>
+        <th>Tipo Risco</th>
+        <th>Taxa</th>
+    </tr>
+    </thead>
+    
+    <tbody>
+        <tr *ngFor="let pessoa of pessoas; let i = index;">
+        <td>{{ pessoa.id }}</td>        
+        <td>{{ pessoa.nome }}</td>
+        <td>{{ pessoa.limiteCredito }}</td>                                
+        <td>{{ pessoa.risco}}</td>
+        <td>{{ pessoa.taxa }}</td>                                
+        </tr>
+        <tr>
+           <td colspan="5" style="text-align: right;">Total de Registros: {{ pessoas.length }}</td> 
+        </tr>
+    </tbody>
+</table>
+      

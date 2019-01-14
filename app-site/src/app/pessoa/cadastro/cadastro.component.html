@@ -1,0 +1,23 @@
+
+
+<form (ngSubmit)="salvar()">   
+    
+    <br/>
+    <h3>{{titulo}}</h3>
+
+    <label>Nome:
+        <input  type="text" name="nome" size="30" [(ngModel)]="pessoa.nome"/>
+    </label><br/><br/>
+
+    <label>Limite de Credito:
+        <input currencyMask type="text" name="nome" size="30" [(ngModel)]="pessoa.limiteCredito"/>
+    </label><br/><br/>
+
+    <label>Tipo de Risco:
+        <select name="tipoRisco" [(ngModel)]="pessoa.risco">
+            <option *ngFor="let item of listTipoRisco" [value]="item">{{item}}</option>
+        </select>
+    </label><br/><br/>
+
+    <button type="submit">Salvar</button>
+</form>
